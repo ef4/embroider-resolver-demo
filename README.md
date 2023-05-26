@@ -1,56 +1,26 @@
 # embroider-resolver-example
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app demonstrates how you can use the `Resolver` from `@embroider/core` to ask build-time resolution questions about an Ember app.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+The app here is just the stock blueprint plus Embroider installed by the basic instructions in the Embroider readme.
 
 ## Installation
 
 * `git clone <repository-url>` this repository
 * `cd embroider-resolver-example`
-* `npm install`
+* `pnpm install`
 
-## Running / Development
+## Running
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+ * First you need to get the embroider stage 2 build output:
 
-### Code Generators
+     ```
+     STAGE2_ONLY=true ember build
+     ```
 
-Make use of the many generators for code, try `ember help generate` for more details
+ * Then you can run the resolver demo:
 
-### Running Tests
+    ```
+    npx ts-node resolver-demo.ts
+    ```
 
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
